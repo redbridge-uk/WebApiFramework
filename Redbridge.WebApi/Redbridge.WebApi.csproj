@@ -16,6 +16,7 @@
     <PackageReference Include="Ionic.Zip" Version="1.9.1.8" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.9" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Owin" Version="4.2.2" />
     <PackageReference Include="Redbridge.ApiManagement" Version="2.2.1" />
     <PackageReference Include="Redbridge.SDK" Version="2.2.1" />
   </ItemGroup>
