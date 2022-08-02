@@ -1,0 +1,30 @@
+name: Release to NuGet
+
+on:
+  release:
+    types: [published]
+    
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET 6
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Setup .NET Core 3.1	
+      uses: actions/setup-dotnet@v1	
+      with:	
+        dotnet-version: 3.1.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build -c Release
+    - name: Test
+      run: dotnet test -c Release --no-build
+    - name: Pack nugets
+      run: dotnet pack -c Release --no-build /p:Version=${{ github.event.release.tag_name }} --output .
+    - name: Push to NuGet
+      run: dotnet nuget push "*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json
