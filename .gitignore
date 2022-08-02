@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/Redbridge.WebApiFramework
+/Redbridge.WebApi/bin/Debug/net472
+/Redbridge.WebApi/obj
+/Redbridge.WebApi.Tests/bin/Debug/net472
+/Redbridge.WebApi.Tests/obj

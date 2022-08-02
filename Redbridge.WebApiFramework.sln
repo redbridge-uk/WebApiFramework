@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Redbridge.WebApi", "Redbridge.WebApi\Redbridge.WebApi.csproj", "{67A84D58-FB4D-4FB7-A4BA-EE85B2EC9064}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Redbridge.WebApi.Tests", "Redbridge.WebApi.Tests\Redbridge.WebApi.Tests.csproj", "{8D21277A-50CB-4300-A32F-0518E68D84B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67A84D58-FB4D-4FB7-A4BA-EE85B2EC9064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A84D58-FB4D-4FB7-A4BA-EE85B2EC9064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A84D58-FB4D-4FB7-A4BA-EE85B2EC9064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A84D58-FB4D-4FB7-A4BA-EE85B2EC9064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D21277A-50CB-4300-A32F-0518E68D84B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D21277A-50CB-4300-A32F-0518E68D84B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D21277A-50CB-4300-A32F-0518E68D84B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D21277A-50CB-4300-A32F-0518E68D84B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDB4DEDB-C28B-44AF-9CD3-79B0D8E741DD}
+	EndGlobalSection
+EndGlobal

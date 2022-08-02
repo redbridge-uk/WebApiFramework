@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <PackageIconUrl>https://github.com/redbridge-uk/resources/blob/master/redbridge_32.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Security\**" />
+    <EmbeddedResource Remove="Security\**" />
+    <None Remove="Security\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ionic.Zip" Version="1.9.1.8" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.9" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Redbridge.ApiManagement" Version="2.2.1" />
+    <PackageReference Include="Redbridge.SDK" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+
+</Project>
