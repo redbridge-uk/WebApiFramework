@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Redbridge.WebApi.Tests", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redbridge.WebApiCore", "Redbridge.WebApiCore\Redbridge.WebApiCore.csproj", "{CC19B56C-15E4-4CD7-9ACE-4AA6CA22A214}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redbridge.WebApiCore.Tests", "Redbridge.WebApiCore.Tests\Redbridge.WebApiCore.Tests.csproj", "{826C1EB0-0466-405E-A567-F912DD9FE39B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CC19B56C-15E4-4CD7-9ACE-4AA6CA22A214}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC19B56C-15E4-4CD7-9ACE-4AA6CA22A214}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC19B56C-15E4-4CD7-9ACE-4AA6CA22A214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{826C1EB0-0466-405E-A567-F912DD9FE39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{826C1EB0-0466-405E-A567-F912DD9FE39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{826C1EB0-0466-405E-A567-F912DD9FE39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{826C1EB0-0466-405E-A567-F912DD9FE39B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

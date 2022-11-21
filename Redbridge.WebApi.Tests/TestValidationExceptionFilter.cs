@@ -20,7 +20,7 @@ namespace Redbridge.WebApi.Tests
         public void FilterValidationExceptionSingleType()
         {
             var logger = new Mock<ILogger>();
-            var filter = new ValidationExceptionFilter(logger.Object);
+            var filter = new ValidationExceptionFilterAttribute(logger.Object);
             filter.OnException(new HttpActionExecutedContext() { });
         }
 
@@ -28,7 +28,7 @@ namespace Redbridge.WebApi.Tests
         public void FilterValidationExceptionSingleTypeViewValidateBodyJson()
         {
             var logger = new Mock<ILogger>();
-            var filter = new ValidationExceptionFilter(logger.Object);
+            var filter = new ValidationExceptionFilterAttribute(logger.Object);
 
             var httpActionContext = new HttpActionContext
             {
@@ -55,7 +55,7 @@ namespace Redbridge.WebApi.Tests
         public void FilterValidationExceptionMultiTypeViewValidateBodyJson()
         {
             var logger = new Mock<ILogger>();
-            var filter = new ValidationExceptionFilter(logger.Object);
+            var filter = new ValidationExceptionFilterAttribute(logger.Object);
 
             var httpActionContext = new HttpActionContext
             {
@@ -89,7 +89,7 @@ namespace Redbridge.WebApi.Tests
         public void FilterValidationExceptionMultiTypeViewValidateBodyJsonNoDefinedMessage()
         {
             var logger = new Mock<ILogger>();
-            var filter = new ValidationExceptionFilter(logger.Object);
+            var filter = new ValidationExceptionFilterAttribute(logger.Object);
 
             var httpActionContext = new HttpActionContext
             {

@@ -26,7 +26,7 @@ namespace Redbridge.WebApi.Tests
         public void ProcessUnknownEntityExceptionConvertTo422Response()
         {
             var logger = new Mock<ILogger>();
-            var filter = new UnknownEntityExceptionFilter(logger.Object);
+            var filter = new UnknownEntityExceptionFilterAttribute(logger.Object);
 
             var httpActionContext = new HttpActionContext
             {
@@ -46,7 +46,7 @@ namespace Redbridge.WebApi.Tests
         public void ProcessUnknownEntityExceptionConvertToValidationException()
         {
             var logger = new Mock<ILogger>();
-            var filter = new UnknownEntityExceptionFilter(logger.Object);
+            var filter = new UnknownEntityExceptionFilterAttribute(logger.Object);
 
             var httpActionContext = new HttpActionContext
             {

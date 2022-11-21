@@ -18,7 +18,7 @@ namespace Redbridge.WebApi.Tests
         public void FilterExceptionNormalMessage()
         {
             var logger = new Mock<ILogger>();
-            var filter = new LoggingExceptionFilter(logger.Object);
+            var filter = new LoggingExceptionFilterAttribute(logger.Object);
             var httpActionContext = new HttpActionContext
             {
                 ControllerContext = new HttpControllerContext
@@ -36,7 +36,7 @@ namespace Redbridge.WebApi.Tests
         public void FilterExceptionMessageWithCarriageReturns()
         {
             var logger = new Mock<ILogger>();
-            var filter = new LoggingExceptionFilter(logger.Object);
+            var filter = new LoggingExceptionFilterAttribute(logger.Object);
             var messageBuilder = new StringBuilder("Unknown/invalid some sort of message:");
             messageBuilder.AppendLine("Link ID: abc");
             messageBuilder.AppendLine("Link ID: def");

@@ -7,11 +7,11 @@ using Redbridge.Diagnostics;
 
 namespace Redbridge.WebApi.Filters
 {
-    public class LoggingExceptionFilter : ExceptionFilterAttribute
+    public class LoggingExceptionFilterAttribute : ExceptionFilterAttribute
     {
         private readonly ILogger _logger;
 
-        public LoggingExceptionFilter(ILogger logger)
+        public LoggingExceptionFilterAttribute(ILogger logger)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }

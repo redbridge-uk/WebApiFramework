@@ -12,11 +12,11 @@ using Redbridge.Validation;
 
 namespace Redbridge.WebApi.Filters
 {
-    public class ValidationExceptionFilter : ExceptionFilterAttribute
+    public class ValidationExceptionFilterAttribute : ExceptionFilterAttribute
     {
         readonly ILogger _logger;
 
-        public ValidationExceptionFilter(ILogger logger)
+        public ValidationExceptionFilterAttribute(ILogger logger)
         {
             if (logger == null) throw new ArgumentNullException(nameof(logger));
             _logger = logger;
