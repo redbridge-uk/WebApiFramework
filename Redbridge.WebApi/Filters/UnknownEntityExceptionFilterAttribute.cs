@@ -8,21 +8,18 @@ using Redbridge.Diagnostics;
 
 namespace Redbridge.WebApi.Filters
 {
-    public class UnknownEntityExceptionFilter : ExceptionFilterAttribute
+    public class UnknownEntityExceptionFilterAttribute : ExceptionFilterAttribute
     {
         private readonly ILogger _logger;
 
-        public UnknownEntityExceptionFilter(ILogger logger)
+        public UnknownEntityExceptionFilterAttribute(ILogger logger)
         {
-            if (logger == null) throw new ArgumentNullException(nameof(logger));
-            _logger = logger;
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         public override void OnException(HttpActionExecutedContext actionExecutedContext)
         {
-            var unknownEntityException = actionExecutedContext.Exception as UnknownEntityException;
-
-            if (unknownEntityException != null)
+            if (actionExecutedContext.Exception is UnknownEntityException unknownEntityException)
             {
                 _logger.WriteInfo($"Unknown entity exception processing with message {unknownEntityException.Message}");
 
