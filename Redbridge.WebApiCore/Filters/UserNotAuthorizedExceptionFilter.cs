@@ -17,8 +17,6 @@ namespace Redbridge.WebApiCore.Filters
 
         public override void OnException(ExceptionContext actionExecutedContext)
         {
-            _logger.LogInformation("Checking exception for user not authorized exception filtering....");
-
             if (actionExecutedContext.Exception is UserNotAuthorizedException exception)
             {
                 actionExecutedContext.ExceptionHandled = true;

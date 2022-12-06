@@ -1,6 +1,7 @@
 ﻿using System.Net.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
+using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 using Redbridge.Data;

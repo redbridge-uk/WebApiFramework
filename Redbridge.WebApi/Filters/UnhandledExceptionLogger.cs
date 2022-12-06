@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.ExceptionHandling;
-using Redbridge.Diagnostics;
+using Microsoft.Extensions.Logging;
 
 namespace Redbridge.WebApi.Filters
 {
@@ -17,10 +17,10 @@ namespace Redbridge.WebApi.Filters
 
         public Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
         {
-            _logger.WriteInfo("Logging (only) unhandled exceptions...");
+            _logger.LogInformation("Logging (only) unhandled exceptions...");
 
             if (context.Exception != null)
-                _logger.WriteException(context.Exception);
+                _logger.LogError(context.Exception.Message, context.Exception);
 
             return Task.CompletedTask;
         }

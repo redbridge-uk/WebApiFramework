@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Filters;
+using Microsoft.Extensions.Logging;
 using Redbridge.Data;
 using Redbridge.Diagnostics;
 
@@ -21,7 +22,7 @@ namespace Redbridge.WebApi.Filters
         {
             if (actionExecutedContext.Exception is UnknownEntityException unknownEntityException)
             {
-                _logger.WriteInfo($"Unknown entity exception processing with message {unknownEntityException.Message}");
+                _logger.LogInformation($"Unknown entity exception processing with message {unknownEntityException.Message}");
 
                 var errorMessageError = new HttpError(unknownEntityException.Message);
                 // Only a single result issue.
