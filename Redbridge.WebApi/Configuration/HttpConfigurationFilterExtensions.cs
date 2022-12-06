@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
+using Microsoft.Extensions.Logging;
 using Redbridge.Diagnostics;
 using Redbridge.WebApi.Filters;
 using Redbridge.WebApi.Handlers;
@@ -14,7 +15,7 @@ namespace Redbridge.WebApi.Configuration
             if (logger == null) throw new ArgumentNullException(nameof(logger));
             if (configuration == null) throw new ArgumentNullException(nameof(configuration));
 
-            logger.WriteDebug("Installing exception filters...");
+            logger.LogDebug("Installing exception filters...");
             configuration.Filters.Add(new ValidationExceptionFilterAttribute(logger));
             configuration.Filters.Add(new UnknownEntityExceptionFilterAttribute(logger));
             configuration.Filters.Add(new UserNotAuthenticatedExceptionFilterAttribute());
@@ -22,7 +23,7 @@ namespace Redbridge.WebApi.Configuration
             configuration.Filters.Add(new LoggingExceptionFilterAttribute(logger));
             configuration.MessageHandlers.Add(new NotFoundCustomMessageHandler());
 
-            logger.WriteDebug("Installing exception logger...");
+            logger.LogDebug("Installing exception logger...");
             configuration.Services.Replace(typeof(IExceptionLogger), new UnhandledExceptionLogger(logger));
         }
     }

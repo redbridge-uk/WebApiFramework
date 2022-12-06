@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
+using Microsoft.Extensions.Logging;
 using Redbridge.Exceptions;
 using Redbridge.Threading;
 using Redbridge.Web.Messaging;
