@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Web.Http.Filters;
 using Microsoft.Extensions.Logging;
-using Redbridge.Diagnostics;
 using Redbridge.Exceptions;
 
 namespace Redbridge.WebApi.Filters
@@ -20,9 +19,7 @@ namespace Redbridge.WebApi.Filters
         {
             _logger.LogInformation("Checking exception for user not authorized exception filtering....");
 
-            var exception = actionExecutedContext.Exception as UserNotAuthorizedException;
-
-            if (exception != null)
+            if (actionExecutedContext.Exception is UserNotAuthorizedException exception)
             {
                 var response = new HttpResponseMessage(HttpStatusCode.Forbidden)
                 {

@@ -31,7 +31,7 @@ namespace Redbridge.WebApi.Filters
                 };
 
                 actionExecutedContext.Response = response;
-                _logger.LogError(actionExecutedContext.Exception.Message, actionExecutedContext.Exception);
+                _logger.LogError(actionExecutedContext.Exception, actionExecutedContext.Exception.Message);
             }
         }
     }
